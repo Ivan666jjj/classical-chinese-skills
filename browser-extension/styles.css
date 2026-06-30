@@ -1,0 +1,23 @@
+/* 汉语言 AI 助手 · 页面内容样式 */
+.han-yan-tooltip {
+  position: absolute;
+  z-index: 999999;
+  background: #2c2c2c;
+  color: #f0e6d3;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: "PingFang SC", "Microsoft YaHei", serif;
+  line-height: 1.5;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.han-yan-tooltip::before {
+  content: "📜 汉语言";
+  display: block;
+  font-size: 11px;
+  color: #c4a882;
+  margin-bottom: 4px;
+}

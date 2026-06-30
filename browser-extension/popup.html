@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>汉语言 AI 助手</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 380px;
+      min-height: 300px;
+      font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f8f7f4;
+      color: #2c2c2c;
+    }
+    .header {
+      background: linear-gradient(135deg, #8b4513, #a0522d);
+      color: #fff;
+      padding: 16px;
+      text-align: center;
+    }
+    .header h1 { font-size: 18px; font-weight: 600; }
+    .header p { font-size: 12px; opacity: 0.85; margin-top: 4px; }
+    .input-area {
+      padding: 12px;
+      display: flex;
+      gap: 8px;
+    }
+    .input-area input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+    }
+    .input-area input:focus { border-color: #8b4513; }
+    .input-area button {
+      padding: 8px 16px;
+      background: #8b4513;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .input-area button:hover { background: #a0522d; }
+    .quick-tools {
+      padding: 0 12px 8px;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .quick-tools button {
+      padding: 4px 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 12px;
+      color: #555;
+    }
+    .quick-tools button:hover { border-color: #8b4513; color: #8b4513; }
+    .result {
+      padding: 12px;
+      border-top: 1px solid #eee;
+      min-height: 100px;
+    }
+    .result .empty {
+      color: #999;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+    .result .item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .result .item .label {
+      font-size: 11px;
+      color: #8b4513;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .result .item .content { font-size: 14px; line-height: 1.6; }
+    .result .item .content .explain { color: #666; font-size: 12px; }
+    .footer {
+      text-align: center;
+      padding: 8px;
+      font-size: 11px;
+      color: #aaa;
+      border-top: 1px solid #eee;
+    }
+    .footer a { color: #8b4513; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📜 汉语言 AI 助手</h1>
+    <p>选字查说文 · 测平仄 · 断句读</p>
+  </div>
+  <div class="input-area">
+    <input type="text" id="searchInput" placeholder="输入汉字或词语..." autofocus>
+    <button id="searchBtn">查询</button>
+  </div>
+  <div class="quick-tools">
+    <button data-tool="shuowen">🔍 说文</button>
+    <button data-tool="pingze">📐 平仄</button>
+    <button data-tool="juandu">📖 句读</button>
+    <button data-tool="yitizi">🔤 异体字</button>
+    <button data-tool="jingdian">🏛 经学</button>
+  </div>
+  <div class="result" id="resultArea">
+    <div class="empty">输入文字或选中网页内容后点击查询</div>
+  </div>
+  <div class="footer">
+    基于 <a href="https://github.com/Ivan666jjj/classical-chinese-skills" target="_blank">classical-chinese-skills</a>
+    · 严小焕  · 数字人文方向
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
