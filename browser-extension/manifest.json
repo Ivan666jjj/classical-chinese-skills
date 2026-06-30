@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "📜 汉语言 AI 助手",
+  "name": "汉语言 AI 助手",
   "version": "1.0.0",
   "description": "选中文字即可查询说文解字、平仄检测、古籍句读、异体字识别。汉语言文学专业 AI 工具包。",
   "author": "严小焕",
@@ -11,19 +11,10 @@
     "128": "icons/icon128.png"
   },
   "permissions": [
-    "contextMenus",
-    "storage"
+    "contextMenus"
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "汉语言 AI 助手",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
-  },
-  "background": {
-    "service_worker": "background.js"
+    "default_title": "汉语言查询"
   }
 }
