@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "汉语言 AI 助手",
+  "name": "📜 汉语言 AI 助手",
   "version": "1.0.0",
-  "description": "选中文字即可查询说文解字、平仄检测、古籍句读、异体字识别。汉语言文学专业 AI 工具。",
+  "description": "选中文字即可查询说文解字、平仄检测、古籍句读、异体字识别。汉语言文学专业 AI 工具包。",
   "author": "严小焕",
   "homepage_url": "https://github.com/Ivan666jjj/classical-chinese-skills",
   "icons": {
@@ -12,11 +12,7 @@
   },
   "permissions": [
     "contextMenus",
-    "storage",
-    "activeTab"
-  ],
-  "host_permissions": [
-    "https://api.open-meteo.com/*"
+    "storage"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -29,12 +25,5 @@
   },
   "background": {
     "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["styles.css"]
-    }
-  ]
+  }
 }
